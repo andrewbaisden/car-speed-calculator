@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Calculate your average driving speed</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <div class="container">
+        <div class="heading">
+            <h1>Calculate your average driving speed</h1>
+            <p>This form is designed to help you calculate your average driving speed, over a certain distance.</p>
+        </div>
+        <div class="form-details">
+            <div class="speed-data">
+                <h2>Distance input data example</h2>
+                <ul>
+                    <li>1 miles</li>
+                    <li>2 miles</li>
+                    <li>3 miles</li>
+                    <li>4 miles</li>
+                    <li>5 miles</li>
+                    <li>6 miles</li>
+                    <li>7 miles</li>
+                    <li>8 miles</li>
+                    <li>9 miles</li>
+                    <li>10 miles</li>
+                </ul>
+            </div>
+            <div class="speed-data">
+                <h2>Time travelled input data example</h2>
+                <ul>
+                    <li>0.1 = 10 Minutes</li>
+                    <li>0.2 = 20 Minutes</li>
+                    <li>0.3 = 30 Minutes</li>
+                    <li>0.4 = 40 Minutes</li>
+                    <li>0.5 = 50 Minutes</li>
+                    <li>0.6 = 60 Minutes</li>
+                    <li>0.7 = 70 Minutes</li>
+                    <li>0.8 = 80 Minutes</li>
+                    <li>0.9 = 90 Minutes</li>
+                    <li>1 = 100 Minutes</li>
+                </ul>
+            </div>
+        </div>
+        <div class="form">
+            <div class="form-data">
+                <p>
+                    <b>How much distance did you travel:</b>
+                </p>
+                <input type="text" id="distance" value="" required> Miles
+                <p>
+                    <b>How much time did you spend travelling:</b>
+                </p>
+                <input type="text" id="speed" value="" required> Minutes
+            </div>
+            <div class="form-buttons">
+                <button id="submit-btn">Calculate Data</button>
+
+                <button id="clear-data-btn">Clear Data</button>
+            </div>
+        </div>
+        <div id="outputData"></div>
+
+    </div>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
