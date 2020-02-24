@@ -1,13 +1,9 @@
 # Car Speed Calculator App
 
+![Car Speed Calculator App](https://res.cloudinary.com/d74fh3kw/image/upload/v1582546995/car_speed_calculator_cpnvfk.png 'Car Speed Calculator App')
+
 ## Instructions
 
 1. Download the app
-2. CD into the folder using your terminal app
-3. Run the command `npm run start`
-
-Online demos here:
-
-[Codepen](https://codepen.io/andrewbaisden/pen/GQYXGE "Codepen Demo")
-
-[JSFiddle](https://jsfiddle.net/andrewbaisden/jngzat7z/ "JSFiddle Demo")
+2. `cd` into the folder using your terminal app
+3. Run the commands `npm install` and `npm run dev`
