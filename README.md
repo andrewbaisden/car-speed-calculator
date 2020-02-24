@@ -6,4 +6,4 @@
 
 1. Download the app
 2. `cd` into the folder using your terminal app
-3. Run the commands `npm install` and `npm run dev`
+3. Run the commands `npm install` and `npm run start`
