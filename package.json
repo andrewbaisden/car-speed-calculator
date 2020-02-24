@@ -4,8 +4,8 @@
 	"description": "",
 	"main": "index.js",
 	"scripts": {
-		"start": "node app.js",
-		"dev": "nodemon app.js"
+		"start": "./node_modules/.bin/netlify-lambda serve src",
+		"build": "./node_modules/.bin/netlify-lambda build src"
 	},
 	"author": "Andrew Baisden",
 	"license": "MIT",
@@ -24,6 +24,9 @@
 	"dependencies": {
 		"babel-cli": "^6.26.0",
 		"babel-preset-env": "^1.7.0",
-		"express": "^4.17.1"
+		"ejs": "^3.0.1",
+		"express": "^4.17.1",
+		"netlify-lambda": "^1.6.3",
+		"serverless-http": "^2.3.1"
 	}
 }
