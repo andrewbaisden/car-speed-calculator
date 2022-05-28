@@ -1,6 +1,5 @@
 const express = require('express');
 const ejs = require('ejs');
-const serverless = require('serverless-http');
 const path = require('path');
 
 const app = express();
@@ -9,14 +8,12 @@ app.set('view engine', 'ejs');
 
 app.engine('ejs', require('ejs').__express);
 
-app.set('views', 'views');
+app.set('views', './views');
 
-const router = express.Router();
+app.use('/static', express.static('public'));
 
-router.get('/', (req, res) => res.render('index'));
+app.get('/', (req, res) => res.render('index'));
 
-router.use(express.static('public'));
+const port = process.env.PORT || 3000;
 
-app.use('/.netlify/functions/app', router);
-
-module.exports.handler = serverless(app);
+app.listen(port, () => console.log(`Server running on port ${port}, http://localhost:${port}`));

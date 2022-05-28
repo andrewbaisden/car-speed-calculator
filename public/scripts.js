@@ -1,16 +1,16 @@
 const carProfile = {
 	superCar: {
 		carName: 'Lamborghini',
-		carImg: 'https://res.cloudinary.com/d74fh3kw/image/upload/v1582554587/lambo_bvgcag.png'
+		carImg: 'http://localhost:3000/static/lambo.png',
 	},
 	roadCar: {
 		carName: 'Volkswagon',
-		carImg: 'https://res.cloudinary.com/d74fh3kw/image/upload/v1582554589/vw_dfls9w.png'
+		carImg: 'http://localhost:3000/static/vw.png',
 	},
 	slowCar: {
 		carName: 'Citroen',
-		carImg: 'https://res.cloudinary.com/d74fh3kw/image/upload/v1582554587/citroen_qsb7dx.png'
-	}
+		carImg: 'http://localhost:3000/static/citroen.png',
+	},
 };
 
 const carSpeed = () => {

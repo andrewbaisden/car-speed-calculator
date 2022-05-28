@@ -1,6 +1,6 @@
 # Car Speed Calculator App
 
-![Car Speed Calculator App](https://res.cloudinary.com/d74fh3kw/image/upload/v1582546995/car_speed_calculator_cpnvfk.png 'Car Speed Calculator App')
+![Car Speed Calculator App](/img/car-speed-calculator.png 'Car Speed Calculator App')
 
 ## Instructions
 
