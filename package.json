@@ -4,9 +4,7 @@
 	"description": "",
 	"main": "index.js",
 	"scripts": {
-		"start": "node src/app.js",
-		"lambda-serve": "netlify-lambda serve src",
-		"lambda-build": "netlify-lambda build src"
+		"start": "node src/app.js"
 	},
 	"author": "Andrew Baisden",
 	"license": "MIT",
