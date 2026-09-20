@@ -6,9 +6,16 @@
     --container-bg: #ffffff;
 }
 
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
 html {
     font-size: 62.5%;
     /* font-size 1em = 10px on default browser settings target / 10 = result */
+    overflow-x: hidden;
 }
 
 body {
@@ -16,6 +23,8 @@ body {
     background: var(--body-bg);
     font-size: 1.6rem;
     color: var(--font-color);
+    margin: 0;
+    overflow-x: hidden;
 }
 
 .container {
@@ -25,6 +34,7 @@ body {
     background: var(--container-bg);
     max-width: 1300px;
     width: 100%;
+    min-width: 0;
     padding: 20px;
     border-radius: 10px;
     -webkit-box-shadow: 0px 0px 30px -10px rgba(224, 224, 224, 1);
@@ -36,6 +46,8 @@ body {
     text-align: center;
     margin-bottom: 20px;
     padding: 20px;
+    min-width: 0;
+    max-width: 100%;
 }
 
 .heading h1 {
@@ -47,6 +59,8 @@ body {
     grid-template-columns: 1fr 1fr;
     grid-gap: 20px;
     border-radius: 10px;
+    min-width: 0;
+    max-width: 100%;
 }
 
 ul {
@@ -68,6 +82,8 @@ ul li {
 .form {
     margin-top: 20px;
     padding: 20px;
+    min-width: 0;
+    max-width: 100%;
     -webkit-box-shadow: 0px 0px 30px -10px rgba(224, 224, 224, 1);
     -moz-box-shadow: 0px 0px 30px -10px rgba(224, 224, 224, 1);
     box-shadow: 0px 0px 30px -10px rgba(224, 224, 224, 1);
@@ -76,7 +92,16 @@ ul li {
 
 .form-data input {
     width: 70%;
+    max-width: calc(100% - 5.5em);
     height: 20px;
+}
+
+.form h2 {
+    margin-top: 0;
+}
+
+#convertOutput {
+    margin-top: 20px;
 }
 
 .img-responsive {
@@ -89,7 +114,7 @@ ul li {
     display: grid;
     grid-gap: 20px;
     grid-template-columns: 1fr 1fr;
-    grid-auto-flow: column;
+    min-width: 0;
 }
 
 button {
@@ -101,6 +126,7 @@ button {
     font-size: 1.8rem;
     max-width: 200px;
     width: 100%;
+    min-width: 0;
     transition: background 1s;
 }
 
@@ -111,11 +137,52 @@ button:hover {
 
 #outputData {
     display: grid;
-    justify-content: center;
+    justify-items: center;
+    text-align: center;
+    width: 100%;
+    min-width: 0;
+    overflow-wrap: anywhere;
+}
+
+#outputData h1,
+#outputData p {
+    max-width: 100%;
+    min-width: 0;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+}
+
+h1,
+h2 {
+    overflow-wrap: anywhere;
 }
 
 @media screen and (max-width: 700px) {
     .form-details {
         grid-template-columns: 1fr;
+    }
+
+    .heading {
+        padding: 10px 0;
+    }
+
+    .heading h1 {
+        font-size: 2.2rem;
+        line-height: 1.3;
+    }
+
+    #outputData h1 {
+        font-size: 2.2rem;
+        line-height: 1.3;
+    }
+
+    .form-buttons {
+        grid-gap: 12px;
+    }
+
+    button {
+        padding: 16px 8px;
+        font-size: 1.4rem;
+        max-width: none;
     }
 }
